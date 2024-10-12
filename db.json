@@ -1,0 +1,37 @@
+{
+    "posts": [
+      { "id": "1", "title": "a title", "views": 100 },
+      { "id": "2", "title": "another title", "views": 200 }
+    ],
+    "comments": [
+      { "id": "1", "text": "a comment about post 1", "postId": "1" },
+      { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "profile": {
+      "name": "typicode"
+    },
+    "employees": [
+        {   "id": "1",
+            "empName": "Ramesh",
+            "empId": "ramesh@abc.com",
+            "empPhone": "458968566",
+            "empAddress": "Pune",
+            "empDept": "Marketing"
+        },
+        {   "id": "2",
+            "empName": "Ganesh",
+            "empId": "ganeshh@abc.com",
+            "empPhone": "9952468525",
+            "empAddress": "Nashik",
+            "empDept": "IT"
+        },
+        {   "id": "3",
+            "empName": "Pawan",
+            "empId": "pawan@abc.com",
+            "empPhone": "52468525",
+            "empAddress": "Kolhapur",
+            "empDept": "Accounting"
+        }
+    ]
+    
+  }

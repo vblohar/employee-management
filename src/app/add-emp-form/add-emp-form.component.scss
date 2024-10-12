@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+   
+    width: 95%;
+    max-width: 400px;
+    padding: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: darkmagenta;
+    font-size: 18px;
+    color: white;
+   
+    .input{
+        padding: 15px;
+        border: 0;
+        border-radius: 5px;
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+    .label{
+        padding: 5px;
+    }
+    .btn{
+        padding: 15px;
+        width: 125px;
+        margin: 10px auto 0;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+        background-color: darkorange;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

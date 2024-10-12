@@ -1,0 +1,16 @@
+<div class="table">
+  <div class="column-name">
+    <th>Employee Name</th>
+    <th>Email id</th>
+    <th>Phone No.</th>
+    <th>Address</th>
+    <th>Department</th>
+    <tr class="table-row" *ngFor="let emp of employees">
+      <td class="table-data">{{ emp.empName }}</td>
+      <td class="table-data">{{ emp.empId }}</td>
+      <td class="table-data">{{ emp.empPhone }}</td>
+      <td class="table-data">{{ emp.empAddress }}</td>
+      <td class="table-data">{{ emp.empDept }}</td>
+    </tr>
+  </div>
+</div>

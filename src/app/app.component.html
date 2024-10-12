@@ -1,0 +1,8 @@
+<div class="Appdiv">
+<menubar (showTable)="viewTable()"></menubar>
+<employeelist
+  *ngIf="viewTableevent"
+  (viewTable)="(viewTableevent)"
+></employeelist>
+
+</div>
