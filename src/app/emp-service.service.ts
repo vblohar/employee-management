@@ -11,5 +11,10 @@ export class EmpService {
 
   getEmplyees(): Observable<any>{
       return this.http.get('http://localhost:3000/employees');
+      
+  }
+
+  deleteEmployee(id: number): Observable<any>{
+    return this.http.delete(`http://localhost:3000/employees/${id}`);
   }
 }

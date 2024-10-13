@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { EmpService } from '../emp-service.service';
 
 @Component({
@@ -6,9 +6,9 @@ import { EmpService } from '../emp-service.service';
   templateUrl: './employeelist.component.html',
   styleUrl: './employeelist.component.scss'
 })
-export class EmployeelistComponent {
+export class EmployeelistComponent implements OnChanges {
 
-  // @Input('viewTable') viewTable: boolean= false;
+  
   employees: any;
 
 
@@ -24,5 +24,26 @@ export class EmployeelistComponent {
 
 
   }
+  ngOnChanges(changes: SimpleChanges): void {
+    
+}
 
+refreshList(){
+  this.empService.getEmplyees().subscribe({next: (val:any) =>{
+
+  this.employees = val; }
+});
+}
+  deleteEmpById(empid: number){
+    console.log(empid);
+    this.empService.deleteEmployee(empid).subscribe(
+      ()=> alert('Employee Successfully Deleted!')
+      
+    );
+    this.refreshList();
+      
+    
+  }
+
+  
 }

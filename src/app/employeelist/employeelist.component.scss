@@ -1,13 +1,9 @@
 .table{
     width: 100%;
-    max-width: 800px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 200px;
-    left: 375px;
     border-radius: 5px;
     color: white;
     background-color: darkgoldenrod;
@@ -16,7 +12,7 @@
     .column-name{
         padding: 20px;
     }
-    th, td{
+    th, td {
         padding: 20px;
         border: 1px solid white;
     }
@@ -26,5 +22,38 @@
         background-color: white;
         border: 1px solid darkgoldenrod;
 
+    }
+    .btnDelete{
+        padding: 10px;
+        border: 0.5px solid white;
+        margin: 5px;
+        width: 80px;
+        border: 2px solid red;
+        border-radius: 6px;
+        color: red;
+        background-color: white;
+        cursor: pointer;
+        
+    }
+    .btnEdit{
+        padding: 10px;
+        border: 0.5px solid white;
+        margin: 5px;
+        width: 80px;
+        border: 2px solid rgb(3, 207, 31);
+        border-radius: 6px;
+        color: rgb(3, 207, 31);
+        background-color: white;
+        font-weight: 400;
+        cursor: pointer;
+    }
+    .btnDelete:hover{
+        background-color: antiquewhite;
+        font-size: 15px;
+    }
+
+    .btnEdit:hover{
+        background-color: rgb(219, 255, 219);
+        font-size: 15px;
     }
 }

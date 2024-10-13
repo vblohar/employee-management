@@ -7,6 +7,7 @@ import { MenubarComponent } from './menubar/menubar.component';
 import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { provideHttpClient } from '@angular/common/http';
 import { AddEmpFormComponent } from './add-emp-form/add-emp-form.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { AddEmpFormComponent } from './add-emp-form/add-emp-form.component';
     MenubarComponent,
     EmployeelistComponent,
     AddEmpFormComponent,
+    SidebarComponent,
     
   ],
   imports: [

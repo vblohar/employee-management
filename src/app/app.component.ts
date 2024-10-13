@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'empmanagement';
 
   viewTableevent: boolean=false;
+  viewFormevent: boolean=false;
 
   constructor(){
     console.log(this.viewTable);
@@ -16,5 +17,12 @@ export class AppComponent {
 
   viewTable(){
     this.viewTableevent = !this.viewTableevent;
+    this.viewFormevent = false;
+    
+  }
+
+  viewForm(){
+    this.viewFormevent = !this.viewFormevent;
+    this.viewTableevent = false;
   }
 }

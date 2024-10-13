@@ -1,8 +1,15 @@
 <div class="Appdiv">
-<menubar (showTable)="viewTable()"></menubar>
-<employeelist
-  *ngIf="viewTableevent"
-  (viewTable)="(viewTableevent)"
-></employeelist>
-
+  <menubar></menubar>
+  <div class="btnclick">
+    <sidebar (showList)="viewTable()" (showForm)="viewForm()"></sidebar>
+    <div class="view">
+      <employeelist
+        *ngIf="viewTableevent"
+        (viewTable)="(viewTableevent)"
+      ></employeelist>
+      <div class="empForm">
+        <add-emp-form *ngIf="viewFormevent"></add-emp-form>
+      </div>
+    </div>
+  </div>
 </div>
