@@ -3,7 +3,12 @@
     <div class="form-box">
       <label class="formHeading">Add Employee Details</label>
       <label class="label">Employee Name</label>
-      <input class="input" type="text" placeholder="Name" />
+      <input
+        [(ngModel)]="empName"
+        class="input"
+        type="text"
+        placeholder="Name"
+      />
       <label class="label">Email id</label>
       <input class="input" type="text" placeholder="Email id" />
       <label class="label">Phone No.</label>
@@ -12,7 +17,7 @@
       <input class="input" type="text" placeholder="Address" />
       <label class="label">Department</label>
       <input class="input" type="text" placeholder="Department" />
-      <button class="btn">Save</button>
+      <button class="btn" type="submit">Save</button>
     </div>
   </form>
 </div>

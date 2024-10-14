@@ -34,22 +34,6 @@
       "empPhone": "458968566",
       "empAddress": "Pune",
       "empDept": "Marketing"
-    },
-    {
-      "id": "1",
-      "empName": "Ramesh",
-      "empId": "ramesh@abc.com",
-      "empPhone": "458968566",
-      "empAddress": "Pune",
-      "empDept": "Marketing"
-    },
-    {
-      "id": "1",
-      "empName": "Ramesh",
-      "empId": "ramesh@abc.com",
-      "empPhone": "458968566",
-      "empAddress": "Pune",
-      "empDept": "Marketing"
     }
   ]
 }

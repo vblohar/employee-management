@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrl: './add-emp-form.component.scss'
 })
 export class AddEmpFormComponent {
+  empName: string='';
+
+submitEmp(){
+  console.log("Save" );
+}
+
+
+getFuction() {
+
+  return {
+    "Employeenane": this.empName
+  }
+}
 
 }

@@ -4,46 +4,24 @@ import { EmpService } from '../emp-service.service';
 @Component({
   selector: 'employeelist',
   templateUrl: './employeelist.component.html',
-  styleUrl: './employeelist.component.scss'
+  styleUrl: './employeelist.component.scss',
 })
 export class EmployeelistComponent implements OnChanges {
-
-  
   employees: any;
 
-
-  constructor(private empService: EmpService){
-
-    this.empService.getEmplyees().subscribe({next: (val:any) =>{
-
-      this.employees = val;
-      console.log(this.employees);
-      
-    }
-    });
-
-
+  constructor(private empService: EmpService) {
+    this.employees = this.empService.getEmplyees();
   }
-  ngOnChanges(changes: SimpleChanges): void {
-    
-}
 
-refreshList(){
-  this.empService.getEmplyees().subscribe({next: (val:any) =>{
+  ngOnChanges(changes: SimpleChanges): void {}
 
-  this.employees = val; }
-});
-}
-  deleteEmpById(empid: number){
+  refreshList() {
+    this.employees = this.empService.getEmplyees();
+  }
+
+  deleteEmpById(empid: string) {
     console.log(empid);
-    this.empService.deleteEmployee(empid).subscribe(
-      ()=> alert('Employee Successfully Deleted!')
-      
-    );
+    this.empService.deleteEmployee(empid);
     this.refreshList();
-      
-    
   }
-
-  
 }

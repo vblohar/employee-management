@@ -8,6 +8,7 @@ import { EmployeelistComponent } from './employeelist/employeelist.component';
 import { provideHttpClient } from '@angular/common/http';
 import { AddEmpFormComponent } from './add-emp-form/add-emp-form.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,13 +19,18 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AddEmpFormComponent,
     SidebarComponent,
     
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule, 
+    
+    FormsModule
+    
   ],
   providers: [
-    provideHttpClient()
+    provideHttpClient(),
+    
   ],
   bootstrap: [AppComponent]
 })
