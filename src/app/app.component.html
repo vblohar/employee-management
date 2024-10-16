@@ -8,7 +8,10 @@
         (viewTable)="(viewTableevent)"
       ></employeelist>
       <div class="empForm">
-        <add-emp-form *ngIf="viewFormevent"></add-emp-form>
+        <add-emp-form
+          *ngIf="viewFormevent"
+          (saveBtn)="(viewFormevent)"
+        ></add-emp-form>
       </div>
     </div>
   </div>
