@@ -1,23 +1,69 @@
 <div class="container">
-  <form>
+  <form #myForm="ngForm">
     <div class="form-box">
       <label class="formHeading">Add Employee Details</label>
-      <label class="label">Employee Name</label>
+      <label class="label">Employee Name*</label>
       <input
-        [(ngModel)]="empName"
+        [(ngModel)]="employee.empName"
+        name="empName"
+        id="empName"
         class="input"
         type="text"
         placeholder="Name"
+        ngModel
+        required
       />
+      <div
+        *ngIf="
+          myForm.submitted ||
+          (myForm.touched && myForm.controls['empName']?.invalid)
+        "
+      >
+        Name is required.
+      </div>
       <label class="label">Email id</label>
-      <input class="input" type="text" placeholder="Email id" />
+      <input
+        [(ngModel)]="employee.empEmailId"
+        name="empEmailId"
+        class="input"
+        type="text"
+        placeholder="Email id"
+      />
       <label class="label">Phone No.</label>
-      <input class="input" type="text" placeholder="Phone No." />
+      <input
+        [(ngModel)]="employee.empPhone"
+        name="empPhone"
+        class="input"
+        type="text"
+        placeholder="Phone No."
+      />
       <label class="label">Address</label>
-      <input class="input" type="text" placeholder="Address" />
+      <input
+        [(ngModel)]="employee.empAddress"
+        name="empAddress"
+        class="input"
+        type="text"
+        placeholder="Address"
+      />
       <label class="label">Department</label>
-      <input class="input" type="text" placeholder="Department" />
-      <button class="btn" type="submit">Save</button>
+      <input
+        [(ngModel)]="employee.empDept"
+        name="empDept"
+        class="input"
+        type="text"
+        placeholder="Department"
+      />
+      <button
+        *ngIf="saveBtn"
+        class="btn"
+        type="submit"
+        (click)="addEmployee(myForm)"
+      >
+        Save
+      </button>
+      <button *ngIf="editMode" class="btn" (click)="updateEmployee()">
+        Update
+      </button>
     </div>
   </form>
 </div>

@@ -8,12 +8,12 @@
     <th>Action</th>
     <tr class="table-row" *ngFor="let emp of employees">
       <td class="table-data">{{ emp.empName }}</td>
-      <td class="table-data">{{ emp.empId }}</td>
+      <td class="table-data">{{ emp.empEmailId }}</td>
       <td class="table-data">{{ emp.empPhone }}</td>
       <td class="table-data">{{ emp.empAddress }}</td>
       <td class="table-data">{{ emp.empDept }}</td>
       <td>
-        <button class="btnEdit">Edit</button>
+        <button class="btnEdit" (click)="editEmployee(emp)">Edit</button>
         <button class="btnDelete" (click)="deleteEmpById(emp.id)">
           Delete
         </button>

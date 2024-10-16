@@ -1,15 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-
-interface Employee {
-  id: string;
-  empName: string;
-  empId: string;
-  empPhone: string;
-  empAddress: string;
-  empDept: string;
-}
+import { BehaviorSubject, Observable } from 'rxjs';
+import { Employee } from './employee';
 
 @Injectable({
   providedIn: 'root',
@@ -17,22 +9,27 @@ interface Employee {
 export class EmpService {
   employees: Employee[] = [
     {
-      id: '1',
+      id: 1,
       empName: 'Ramesh',
-      empId: 'ramesh@abc.com',
+      empEmailId: 'ramesh@abc.com',
       empPhone: '458968566',
       empAddress: 'Pune',
       empDept: 'Marketing',
     },
     {
-      id: '3',
-      empName: 'Ramesh',
-      empId: 'ramesh@abc.com',
-      empPhone: '458968566',
-      empAddress: 'Pune',
-      empDept: 'Marketing',
+      id: 2,
+      empName: 'Ganesh',
+      empEmailId: 'ganesh@abc.com',
+      empPhone: '968566',
+      empAddress: 'Pimpri',
+      empDept: 'Computor',
     },
   ];
+
+  /*private selectedEmployeeSubject = new BehaviorSubject<Employee | null>(null);
+  selectedEmployee$ = this.selectedEmployeeSubject.asObservable();*/
+
+  selectedEmployee!: Employee;
 
   constructor() {
     console.log(this.employees);
@@ -43,6 +40,16 @@ export class EmpService {
   }
 
   deleteEmployee(id: any) {
+    console.log('deleted Emplyee id: ', id);
     this.employees = this.employees.filter((emp) => emp.id !== id);
+  }
+
+  addEmployee(employee: Employee) {
+    this.employees.push(employee);
+  }
+
+  selectEmployee(employee: Employee) {
+    // this.selectedEmployeeSubject.next(employee);
+    this.selectedEmployee = employee;
   }
 }

@@ -44,16 +44,22 @@
         border-radius: 6px;
         color: rgb(3, 207, 31);
         background-color: white;
-        font-weight: 400;
+        font-weight: 500;
         cursor: pointer;
     }
     .btnDelete:hover{
-        background-color: antiquewhite;
+        background-color: rgb(250, 0, 0);
+        border: 0;
+        color: white;
         font-size: 15px;
+        font-weight: 600;
     }
 
     .btnEdit:hover{
-        background-color: rgb(219, 255, 219);
+        background-color: rgb(8, 238, 8);
+        border: 0;
+        color: white;
         font-size: 15px;
+        font-weight: 600;
     }
 }
